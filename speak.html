@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <textarea>Jal Patel</textarea>
+    <button>Speak</button>
+
+    <script>
+        button = document.querySelector("button");
+        text = document.querySelector("textarea");
+
+        button.addEventListener("click", () => {
+            let utterance = new SpeechSynthesisUtterance(text.value);
+            speechSynthesis.speak(utterance);
+        });
+    </script>
+</body>
+</html>
